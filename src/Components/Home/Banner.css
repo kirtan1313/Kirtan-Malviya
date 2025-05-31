@@ -1,0 +1,168 @@
+@font-face {
+  font-family: 'the_historia_demoregular';
+  src: url('../../../public/font/TheHistoriaDemo.woff');
+  src: url('../../../public/font/TheHistoriaDemo.woff2');
+}
+
+.styled-heading {
+  font-size: 10rem;
+  font-family: 'the_historia_demoregular', sans-serif;
+  background: linear-gradient(to top, #34a3a3, #bae8e8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 5px;
+  text-align: center;
+  margin: 0;
+}
+
+.landing-text {
+  height: 730px;
+  background-color: #0b0b0f;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo img {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  width: 4rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 101;
+  user-select: none;
+}
+
+.effect-wrap .effect {
+  position: absolute;
+  z-index: 1;
+}
+
+.effect-1 {
+  display: flex;
+  left: 3%;
+  bottom: 20%;
+  width: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  animation: topBounce 2s ease-in-out infinite;
+}
+
+.effect-wrap .effect-1 div {
+  height: 3px;
+  width: 3px;
+  border-radius: 50%;
+  margin: 0 3px 8px;
+  background-color: #fb839e;
+}
+
+@keyframes topBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+.effect.effect-2 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 25px solid #06d79c;
+  left: 35%;
+  top: 10%;
+  animation: spin 15s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.effect.effect-3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #8a49ff;
+  right: 10%;
+  bottom: 10%;
+  animation: spin1 10s linear infinite;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .styled-heading {
+    font-size: 8rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .styled-heading {
+    font-size: 6rem;
+  }
+
+  .effect-wrap .effect {
+    bottom: 30%;
+  }
+
+  .landing-text {
+    height: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .effect-wrap .effect {
+    bottom:45%;
+  }
+
+  .styled-heading {
+    font-size: 4rem;
+  }
+
+  .landing-text {
+    height: 500px;
+    padding: 10px;
+  }
+
+  .logo img {
+    width: 3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .styled-heading {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .landing-text {
+    height: 400px;
+  }
+
+  .logo img {
+    width: 2.5rem;
+  }
+  
+}

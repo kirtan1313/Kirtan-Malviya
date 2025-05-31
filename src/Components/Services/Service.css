@@ -1,0 +1,112 @@
+.services-section {
+  width: 100%;
+  padding: 5rem 2rem;
+  background: #0b0b0f;
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  position: relative;
+   display: inline-block;  
+  text-align: left;
+}
+
+.services-heading .highlight {
+  color:#00bcd4;
+}
+
+.underline {
+  width: 70px;
+  height: 2px;
+  background: linear-gradient(90deg, #00bcd4, #019ca0);
+  position: absolute;
+  bottom: -5px; /* Adjust as needed to align with the text */
+  left: 0;
+  transition: width 0.5s ease-in-out;
+}
+
+.services-heading:hover .underline {
+  width: 100%; /* Expands to the width of the heading */
+}
+
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  background: linear-gradient(135deg, #222, #444);
+  padding: 2rem;
+  height: auto;
+  border-radius: 15px;
+  color: #00bcd4;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  color: white;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #00bcd4, #019ca0);
+  z-index: 1;
+  transition: width 0.5s ease-in-out;
+}
+
+.service-card:hover::before {
+  width: 100%;
+}
+
+.service-card .service-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.service-card .service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.service-card .service-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .service-card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex: 1 1 100%;
+  }
+}

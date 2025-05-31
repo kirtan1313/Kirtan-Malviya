@@ -1,0 +1,172 @@
+.project-section {
+  padding: 4rem 2rem;
+  background: #0b0b0f;
+  color: white;
+  text-align: center;
+}
+
+.services-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #00bcd4;
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.services-heading .highlight {
+  color: #019ca0;
+}
+
+.underline {
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00bcd4, #019ca0);
+  transition: width 0.5s ease-in-out;
+  margin-top: 5px;
+}
+
+.services-heading:hover .underline {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card-width {
+  width: 30%;
+  border-radius: 15px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card1 {
+  background: transparent; /* No background color */
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.card1:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.github-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.github-icon:hover {
+  color: #00bcd4;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.card-width p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .card-width {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-heading {
+    font-size: 1.8rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Card */
+.modal-card {
+  background: #222;
+  padding: 2rem;
+  border-radius: 15px;
+  border: 3px solid #00bcd4; /* Light border */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal-card h3 {
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.modal-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-card ul li {
+  margin: 0.5rem 0;
+}
+
+.modal-card a {
+  color: #00bcd4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.modal-card a:hover {
+  text-decoration: underline;
+}
+
+/* Close Button */
+.close-btn {
+  margin-top: 1rem;
+  background: #ff5722;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  background: #e64a19;
+}
+
+/* Hide body scroll when modal is active */
+body.modal-open {
+  overflow: hidden;
+}
