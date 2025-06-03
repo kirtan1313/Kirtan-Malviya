@@ -23,7 +23,7 @@ function Contact() {
     e.preventDefault();
 
     try {
-      const res = await fetch('http://localhost:5000/send-message', {
+      const res = await fetch("https://my-portfoliyo-backend-side.onrender.com/send-message", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
